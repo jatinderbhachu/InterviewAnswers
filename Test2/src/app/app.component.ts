@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
 
         for (let i = 0; i < categories.length; ++i) {
           if(categories[i].length > 0) {
-            entry.category[(i + 1).toString()] = categories[i];
+            entry.category[(i).toString()] = categories[i];
           }
         }
 

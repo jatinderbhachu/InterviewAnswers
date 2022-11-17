@@ -5,6 +5,17 @@
 class Main {
     public static void main(String[] args) {
         int n = 5;
+        if(args.length >= 1) {
+            try {
+                n = Integer.parseInt(args[0]);
+            } catch(Exception e) {
+                System.out.println("Failed to parse arguments. Usage: main <n>  where n is the height");
+                return;
+            }
+        } else {
+            System.out.println("No height entered printing pyramid with height 5");
+        }
+
 
         for(int i = 1; i <= n; i++) {
             String stars = generateStars(i);
